@@ -1,0 +1,59 @@
+{
+  "name": "figma-template",
+  "version": "1.0.0",
+  "description": "Your Figma Plugin",
+  "type": "module",
+  "author": "",
+  "license": "",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "watch:ui": "export NODE_ENV=DEV && vite build",
+    "build:ui": "export NODE_ENV=PROD && vite build",
+    "watch:code": "esbuild src/plugin/code.ts --bundle --target=es2015 --watch --outdir=dist",
+    "build:code": "esbuild src/plugin/code.ts --bundle --target=es2015 --minify --outdir=dist"
+  },
+  "devDependencies": {
+    "@figma/eslint-plugin-figma-plugins": "*",
+    "@figma/plugin-typings": "*",
+    "@sveltejs/vite-plugin-svelte": "^3.0.2",
+    "@tsconfig/svelte": "^5.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.12.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "eslint": "^8.54.0",
+    "svelte": "^4.2.12",
+    "svelte-check": "^3.6.7",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.2",
+    "vite": "^5.2.0",
+    "vite-plugin-singlefile": "^2.0.1",
+    "vite-svg-loader": "^5.1.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:@figma/figma-plugins/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "root": true,
+    "rules": {
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_",
+          "caughtErrorsIgnorePattern": "^_"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "figblocks": "^0.0.3"
+  }
+}

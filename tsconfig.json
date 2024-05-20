@@ -1,0 +1,30 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "target": "es2016",
+    "lib": ["es2016", "DOM"],
+    "useDefineForClassFields": true,
+    "moduleResolution": "nodenext",
+    "module": "NodeNext",
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["./node_modules/@types", "./node_modules/@figma"],
+    "allowJs": true,
+    "checkJs": true,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "paths": {
+			"$lib": [
+				"./src/lib"
+			],
+			"$lib/*": [
+				"./src/lib/*"
+			]
+		},
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+
+}
