@@ -1,0 +1,412 @@
+
+ .figma-dark code[class*="language-"],
+ .figma-dark pre[class*="language-"] {
+   background: hsl(220, 13%, 18%);
+   background: #222222;
+   color: hsl(220, 14%, 71%);
+   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+   font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+   direction: ltr;
+   text-align: left;
+   white-space: pre;
+   word-spacing: normal;
+   word-break: normal;
+   line-height: 1.5;
+   -moz-tab-size: 2;
+   -o-tab-size: 2;
+   tab-size: 2;
+   -webkit-hyphens: none;
+   -moz-hyphens: none;
+   -ms-hyphens: none;
+   hyphens: none;
+ }
+ 
+ /* Selection */
+ .figma-dark code[class*="language-"]::-moz-selection,
+ .figma-dark code[class*="language-"] *::-moz-selection,
+ .figma-dark pre[class*="language-"] *::-moz-selection {
+   background: hsl(220, 13%, 28%);
+   color: inherit;
+   text-shadow: none;
+ }
+ 
+ .figma-dark code[class*="language-"]::selection,
+ .figma-dark code[class*="language-"] *::selection,
+ .figma-dark pre[class*="language-"] *::selection {
+   background: hsl(220, 13%, 28%);
+   color: inherit;
+   text-shadow: none;
+ }
+ 
+ /* Code blocks */
+ .figma-dark pre[class*="language-"] {
+   padding: 1em;
+   margin: 0.5em 0;
+   overflow: auto;
+   border-radius: 0.3em;
+ }
+ 
+ /* Inline code */
+ .figma-dark :not(pre) > code[class*="language-"] {
+   padding: 0.2em 0.3em;
+   border-radius: 0.3em;
+   white-space: normal;
+ }
+ 
+ /* Print */
+ @media print {
+   .figma-dark code[class*="language-"],
+   .figma-dark pre[class*="language-"] {
+     text-shadow: none;
+   }
+ }
+ 
+ .figma-dark .token.comment,
+ .figma-dark .token.prolog,
+ .figma-dark .token.cdata {
+   color: hsl(220, 10%, 40%);
+ }
+ 
+ .figma-dark .token.doctype,
+ .figma-dark .token.punctuation,
+ .figma-dark .token.entity {
+   color: hsl(220, 14%, 71%);
+ }
+ 
+ .figma-dark .token.attr-name,
+ .figma-dark .token.class-name,
+ .figma-dark .token.boolean,
+ .figma-dark .token.constant,
+ .figma-dark .token.number,
+ .figma-dark .token.atrule {
+   color: hsl(29, 54%, 61%);
+ }
+ 
+ .figma-dark .token.keyword {
+   color: hsl(286, 60%, 67%);
+ }
+ 
+ .figma-dark .token.property,
+ .figma-dark .token.tag,
+ .figma-dark .token.symbol,
+ .figma-dark .token.deleted,
+ .figma-dark .token.important {
+   color: hsl(355, 65%, 65%);
+ }
+ 
+ .figma-dark .token.selector,
+ .figma-dark .token.string,
+ .figma-dark .token.char,
+ .figma-dark .token.builtin,
+ .figma-dark .token.inserted,
+ .figma-dark .token.regex,
+ .figma-dark .token.attr-value,
+ .figma-dark .token.attr-value > .token.punctuation {
+   color: hsl(95, 38%, 62%);
+ }
+ 
+ .figma-dark .token.variable,
+ .figma-dark .token.operator,
+ .figma-dark .token.function {
+   color: hsl(207, 82%, 66%);
+ }
+ 
+ .figma-dark .token.url {
+   color: hsl(187, 47%, 55%);
+ }
+ 
+ /* HTML overrides */
+ .figma-dark .token.attr-value > .token.punctuation.attr-equals,
+ .figma-dark .token.special-attr > .token.attr-value > .token.value.css {
+   color: hsl(220, 14%, 71%);
+ }
+ 
+ /* CSS overrides */
+ .figma-dark .language-css .token.selector {
+   color: hsl(355, 65%, 65%);
+ }
+ 
+ .figma-dark .language-css .token.property {
+   color: hsl(220, 14%, 71%);
+ }
+ 
+ .figma-dark .language-css .token.function,
+ .figma-dark .language-css .token.url > .token.function {
+   color: hsl(187, 47%, 55%);
+ }
+ 
+ .figma-dark .language-css .token.url > .token.string.url {
+   color: hsl(95, 38%, 62%);
+ }
+ 
+ .figma-dark .language-css .token.important,
+ .figma-dark .language-css .token.atrule .token.rule {
+   color: hsl(286, 60%, 67%);
+ }
+ 
+ /* JS overrides */
+ .figma-dark .language-javascript .token.operator {
+   color: hsl(286, 60%, 67%);
+ }
+ 
+ .figma-dark .language-javascript .token.template-string > .token.interpolation > .token.interpolation-punctuation.punctuation {
+   color: hsl(5, 48%, 51%);
+ }
+ 
+ /* JSON overrides */
+ .figma-dark .language-json .token.operator {
+   color: hsl(220, 14%, 71%);
+ }
+ 
+ .figma-dark .language-json .token.null.keyword {
+   color: hsl(29, 54%, 61%);
+ }
+ 
+ /* MD overrides */
+ .figma-dark .language-markdown .token.url,
+ .figma-dark .language-markdown .token.url > .token.operator,
+ .figma-dark .language-markdown .token.url-reference.url > .token.string {
+   color: hsl(220, 14%, 71%);
+ }
+ 
+ .figma-dark .language-markdown .token.url > .token.content {
+   color: hsl(207, 82%, 66%);
+ }
+ 
+ .figma-dark .language-markdown .token.url > .token.url,
+ .figma-dark .language-markdown .token.url-reference.url {
+   color: hsl(187, 47%, 55%);
+ }
+ 
+ .figma-dark .language-markdown .token.blockquote.punctuation,
+ .figma-dark .language-markdown .token.hr.punctuation {
+   color: hsl(220, 10%, 40%);
+   font-style: italic;
+ }
+ 
+ .figma-dark .language-markdown .token.code-snippet {
+   color: hsl(95, 38%, 62%);
+ }
+ 
+ .figma-dark .language-markdown .token.bold .token.content {
+   color: hsl(29, 54%, 61%);
+ }
+ 
+ .figma-dark .language-markdown .token.italic .token.content {
+   color: hsl(286, 60%, 67%);
+ }
+ 
+ .figma-dark .language-markdown .token.strike .token.content,
+ .figma-dark .language-markdown .token.strike .token.punctuation,
+ .figma-dark .language-markdown .token.list.punctuation,
+ .figma-dark .language-markdown .token.title.important > .token.punctuation {
+   color: hsl(355, 65%, 65%);
+ }
+ 
+ /* General */
+ .figma-dark .token.bold {
+   font-weight: bold;
+ }
+ 
+ .figma-dark .token.comment,
+ .figma-dark .token.italic {
+   font-style: italic;
+ }
+ 
+ .figma-dark .token.entity {
+   cursor: help;
+ }
+ 
+ .figma-dark .token.namespace {
+   opacity: 0.8;
+ }
+ 
+ /* Plugin overrides */
+ /* Selectors should have higher specificity than those in the plugins' default stylesheets */
+ 
+ /* Show Invisibles plugin overrides */
+ .figma-dark .token.token.tab:not(:empty):before,
+ .figma-dark .token.token.cr:before,
+ .figma-dark .token.token.lf:before,
+ .figma-dark .token.token.space:before {
+   color: hsla(220, 14%, 71%, 0.15);
+   text-shadow: none;
+ }
+ 
+ /* Toolbar plugin overrides */
+ /* Space out all buttons and move them away from the right edge of the code block */
+ .figma-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item {
+   margin-right: 0.4em;
+ }
+ 
+ /* Styling the buttons */
+ .figma-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > button,
+ .figma-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
+ .figma-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > span {
+   background: hsl(220, 13%, 26%);
+   color: hsl(220, 9%, 55%);
+   padding: 0.1em 0.4em;
+   border-radius: 0.3em;
+ }
+ 
+ .figma-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
+ .figma-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus,
+ .figma-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
+ .figma-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
+ .figma-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
+ .figma-dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
+   background: hsl(220, 13%, 28%);
+   color: hsl(220, 14%, 71%);
+ }
+ 
+ /* Line Highlight plugin overrides */
+ /* The highlighted line itself */
+ .figma-dark .line-highlight.line-highlight {
+   background: hsla(220, 100%, 80%, 0.04);
+ }
+ 
+ /* Default line numbers in Line Highlight plugin */
+ .figma-dark .line-highlight.line-highlight:before,
+ .figma-dark .line-highlight.line-highlight[data-end]:after {
+   background: hsl(220, 13%, 26%);
+   color: hsl(220, 14%, 71%);
+   padding: 0.1em 0.6em;
+   border-radius: 0.3em;
+   box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2); /* same as Toolbar plugin default */
+ }
+ 
+ /* Hovering over a linkable line number (in the gutter area) */
+ /* Requires Line Numbers plugin as well */
+ .figma-dark pre[id].linkable-line-numbers.linkable-line-numbers span.line-numbers-rows > span:hover:before {
+   background-color: hsla(220, 100%, 80%, 0.04);
+ }
+ 
+ /* Line Numbers and Command Line plugins overrides */
+ /* Line separating gutter from coding area */
+ .figma-dark .line-numbers.line-numbers .line-numbers-rows,
+ .figma-dark .command-line .command-line-prompt {
+   border-right-color: hsla(220, 14%, 71%, 0.15);
+ }
+ 
+ /* Stuff in the gutter */
+ .figma-dark .line-numbers .line-numbers-rows > span:before,
+ .figma-dark .command-line .command-line-prompt > span:before {
+   color: hsl(220, 14%, 45%);
+ }
+ 
+ /* Match Braces plugin overrides */
+ /* Note: Outline colour is inherited from the braces */
+ .figma-dark .rainbow-braces .token.token.punctuation.brace-level-1,
+ .figma-dark .rainbow-braces .token.token.punctuation.brace-level-5,
+ .figma-dark .rainbow-braces .token.token.punctuation.brace-level-9 {
+   color: hsl(355, 65%, 65%);
+ }
+ 
+ .figma-dark .rainbow-braces .token.token.punctuation.brace-level-2,
+ .figma-dark .rainbow-braces .token.token.punctuation.brace-level-6,
+ .figma-dark .rainbow-braces .token.token.punctuation.brace-level-10 {
+   color: hsl(95, 38%, 62%);
+ }
+ 
+ .figma-dark .rainbow-braces .token.token.punctuation.brace-level-3,
+ .figma-dark .rainbow-braces .token.token.punctuation.brace-level-7,
+ .figma-dark .rainbow-braces .token.token.punctuation.brace-level-11 {
+   color: hsl(207, 82%, 66%);
+ }
+ 
+ .figma-dark .rainbow-braces .token.token.punctuation.brace-level-4,
+ .figma-dark .rainbow-braces .token.token.punctuation.brace-level-8,
+ .figma-dark .rainbow-braces .token.token.punctuation.brace-level-12 {
+   color: hsl(286, 60%, 67%);
+ }
+ 
+ /* Diff Highlight plugin overrides */
+ /* Taken from https://github.com/atom/github/blob/master/styles/variables.less */
+ .figma-dark pre.diff-highlight > code .token.token.deleted:not(.prefix),
+ .figma-dark pre > code.diff-highlight .token.token.deleted:not(.prefix) {
+   background-color: hsla(353, 100%, 66%, 0.15);
+ }
+ 
+ .figma-dark pre.diff-highlight > code .token.token.deleted:not(.prefix)::-moz-selection,
+ .figma-dark pre.diff-highlight > code .token.token.deleted:not(.prefix) *::-moz-selection,
+ .figma-dark pre > code.diff-highlight .token.token.deleted:not(.prefix)::-moz-selection,
+ .figma-dark pre > code.diff-highlight .token.token.deleted:not(.prefix) *::-moz-selection {
+   background-color: hsla(353, 95%, 66%, 0.25);
+ }
+ 
+ .figma-dark pre.diff-highlight > code .token.token.deleted:not(.prefix)::selection,
+ .figma-dark pre.diff-highlight > code .token.token.deleted:not(.prefix) *::selection,
+ .figma-dark pre > code.diff-highlight .token.token.deleted:not(.prefix)::selection,
+ .figma-dark pre > code.diff-highlight .token.token.deleted:not(.prefix) *::selection {
+   background-color: hsla(353, 95%, 66%, 0.25);
+ }
+ 
+ .figma-dark pre.diff-highlight > code .token.token.inserted:not(.prefix),
+ .figma-dark pre > code.diff-highlight .token.token.inserted:not(.prefix) {
+   background-color: hsla(137, 100%, 55%, 0.15);
+ }
+ 
+ .figma-dark pre.diff-highlight > code .token.token.inserted:not(.prefix)::-moz-selection,
+ .figma-dark pre.diff-highlight > code .token.token.inserted:not(.prefix) *::-moz-selection,
+ .figma-dark pre > code.diff-highlight .token.token.inserted:not(.prefix)::-moz-selection,
+ .figma-dark pre > code.diff-highlight .token.token.inserted:not(.prefix) *::-moz-selection {
+   background-color: hsla(135, 73%, 55%, 0.25);
+ }
+ 
+ .figma-dark pre.diff-highlight > code .token.token.inserted:not(.prefix)::selection,
+ .figma-dark pre.diff-highlight > code .token.token.inserted:not(.prefix) *::selection,
+ .figma-dark pre > code.diff-highlight .token.token.inserted:not(.prefix)::selection,
+ .figma-dark pre > code.diff-highlight .token.token.inserted:not(.prefix) *::selection {
+   background-color: hsla(135, 73%, 55%, 0.25);
+ }
+ 
+ /* Previewers plugin overrides */
+ /* Based on https://github.com/atom-community/atom-ide-datatip/blob/master/styles/atom-ide-datatips.less and https://github.com/atom/atom/blob/master/packages/one-dark-ui */
+ /* Border around popup */
+ .figma-dark .prism-previewer.prism-previewer:before,
+ .figma-dark .prism-previewer-gradient.prism-previewer-gradient div {
+   border-color: hsl(224, 13%, 17%);
+ }
+ 
+ /* Angle and time should remain as circles and are hence not included */
+ .figma-dark .prism-previewer-color.prism-previewer-color:before,
+ .figma-dark .prism-previewer-gradient.prism-previewer-gradient div,
+ .figma-dark .prism-previewer-easing.prism-previewer-easing:before {
+   border-radius: 0.3em;
+ }
+ 
+ /* Triangles pointing to the code */
+ .figma-dark .prism-previewer.prism-previewer:after {
+   border-top-color: hsl(224, 13%, 17%);
+ }
+ 
+ .figma-dark .prism-previewer-flipped.prism-previewer-flipped.after {
+   border-bottom-color: hsl(224, 13%, 17%);
+ }
+ 
+ /* Background colour within the popup */
+ .figma-dark .prism-previewer-angle.prism-previewer-angle:before,
+ .figma-dark .prism-previewer-time.prism-previewer-time:before,
+ .figma-dark .prism-previewer-easing.prism-previewer-easing {
+   background: hsl(219, 13%, 22%);
+ }
+ 
+ /* For angle, this is the positive area (eg. 90deg will display one quadrant in this colour) */
+ /* For time, this is the alternate colour */
+ .figma-dark .prism-previewer-angle.prism-previewer-angle circle,
+ .figma-dark .prism-previewer-time.prism-previewer-time circle {
+   stroke: hsl(220, 14%, 71%);
+   stroke-opacity: 1;
+ }
+ 
+ /* Stroke colours of the handle, direction point, and vector itself */
+ .figma-dark .prism-previewer-easing.prism-previewer-easing circle,
+ .figma-dark .prism-previewer-easing.prism-previewer-easing path,
+ .figma-dark .prism-previewer-easing.prism-previewer-easing line {
+   stroke: hsl(220, 14%, 71%);
+ }
+ 
+ /* Fill colour of the handle */
+ .figma-dark .prism-previewer-easing.prism-previewer-easing circle {
+   fill: transparent;
+ }
