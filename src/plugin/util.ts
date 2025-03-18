@@ -75,7 +75,7 @@ export function genUniqueClassName(node: SceneNode): string {
     let layerName = node.name;
 
     if (layerName.length > 8) layerName = layerName.slice(0, 8);
-    return `${layerName.replace(/[^a-zA-Z0-9-_]/g, "")}-${node.id.replace(/[^a-zA-Z0-9-_]/g, "")}`;
+    return `node-${layerName.replace(/[^a-zA-Z0-9-_]/g, "")}-${node.id.replace(/[^a-zA-Z0-9-_]/g, "")}`;
 }
 
 // Convert rgba to hex
@@ -196,6 +196,8 @@ function cleanImports(script: string): string {
     const otherLines: string[] = [];
     const importSet = new Set<string>();
 
+    console.log("script-inp", script);
+        
     script.split("\n").forEach((line: string) => {
         const trimmedLine = line.trim();
         if (trimmedLine.startsWith("import ")) {
@@ -207,6 +209,7 @@ function cleanImports(script: string): string {
             otherLines.push(line);
         }
     });
+
 
     // Group imports by their source
     const groupedImports: { [key: string]: string[] } = {};
@@ -225,11 +228,20 @@ function cleanImports(script: string): string {
         if (imports.length === 1) {
             return imports[0];
         }
-        const importedItems = imports
-            .map((imp) => imp.match(/import\s+{(.+)}\s+from/)?.[1])
-            .filter(Boolean)
-            .join(", ");
-        return `import { ${importedItems} } from "${source}";`;
+        
+        // Extract all imported items and remove duplicates
+        const importedItemsSet = new Set<string>();
+        imports.forEach((imp) => {
+            const items = imp.match(/import\s+{(.+)}\s+from/)?.[1];
+            if (items) {
+                items.split(',').forEach(item => {
+                    importedItemsSet.add(item.trim());
+                });
+            }
+        });
+        
+        const uniqueImportedItems = Array.from(importedItemsSet).join(", ");
+        return `import { ${uniqueImportedItems} } from "${source}";`;
     });
 
     return [...combinedImports, ...otherLines].join("\n");

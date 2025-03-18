@@ -12,6 +12,9 @@ export function parseComponentInstance(node: InstanceNode): ParsedCode {
     let code = "";
     let style = "";
 
+    // check visibility
+    if (node.visible === false) return { script, code, style };
+    
     const componentName = node.name;
 
     // Get the component's properties
@@ -54,7 +57,7 @@ export function parseComponentInstance(node: InstanceNode): ParsedCode {
         if (label) {
             code = `<Checkbox bind:checked={${checkboxId}Checked} disabled={${disabled}}>${label}</Checkbox>`;
         } else {
-            code = `<Checkbox bind:checked={${checkboxId}Checked} disabled={${disabled}} />`;
+            code = `<Checkbox bind:checked={${checkboxId}Checked} disabled={${disabled}}></Checkbox>`;
         }
         style = ``;
 
@@ -81,7 +84,7 @@ export function parseComponentInstance(node: InstanceNode): ParsedCode {
         if (label) {
             code = `<Radio disabled={${disabled}} value="${value}">${label}</Radio>`;
         } else {
-            code = `<Radio disabled={${disabled}} value="${value}" />`;
+            code = `<Radio disabled={${disabled}} value="${value}"></Radio>`;
         }
         style = ``;
     }
